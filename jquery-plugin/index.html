@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jquery.js"></script>
+<script src="plugin.js"></script>
+<link rel="stylesheet" href="custom.css">
+
+</head>
+<body>
+
+<div class="here">click me</div>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto impedit ipsam dignissimos molestias eius veniam esse natus vitae, sit commodi quos quaerat dolorem magnam optio rerum iure quod eum ab.
+<div class="here2">click me</div>
+
+<script>
+
+$(document).ready(function(){
+
+
+$('.here').gsPop({
+    bodyText:"do you want to Confirm this action?",
+    theme:"plum"
+}).css('color','red');
+
+$('.here2').gsPop({
+    bodyText:"do you want to?"
+});
+
+/*
+{
+    bodyText:"Do you confirm this Action?",
+    headerText:"Confirmation Dialog",
+    theme:"any color of user's choice",(color of header and confirm button)
+    position:"values: top-center,top-left,top-right,(same for bottom),center centered(default-placing box vertically and horizontally center)"
+}
+*/
+});
+</script>
+
+</body>
+</html>
