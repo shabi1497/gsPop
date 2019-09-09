@@ -1,0 +1,138 @@
+/* The Modal (background) */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=News+Cycle&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+.modal 
+{ /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background:rgba(255,255,255,.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  background-color: #fefefe;
+  padding: 0;
+  width: 35%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  font-family: 'Montserrat';
+  
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: white;
+  font-family:'Dancing Script';
+  letter-spacing: 1.5px;
+  font-size:17px;  
+  line-height: 17px;
+  }
+
+.modal-body {
+    padding: 2px 16px;
+    color: #6d6e71;
+}
+
+.modal-footer {
+  padding: 15px 20px;
+  text-align:right;
+  
+ }
+ .modal-footer button
+ {
+     outline: none;
+     border:none;
+     color:white;
+     padding: 12px 20px;   
+     margin-left:10px; 
+     font-family: Verdana, Geneva, Tahoma, sans-serif;  
+ }
+ #canc
+ {
+     box-shadow:0px 0px 0px 3px #5c5c5f inset;/*#ff2e63*/
+     background: white;
+     color: #6d6e71;
+ }
+ #canc:hover
+ {
+     color: black;
+ }
+ #conf
+ {
+     color: white;
+ }
+ #conf:hover
+ {
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2) ;
+ }
+ .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  .top-center
+  {
+      position: absolute;
+      top:8px;
+      left:50%;
+      transform: translate(-50%);
+  }
+   
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  .bottom-center
+  {
+      position: absolute;
+      bottom:8px;
+      left:50%;
+      transform: translate(-50%);
+  }
+  
+  /* Centered text */
+  .center.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /*.center.center*/
+  /*.top.center*/
+  /*.bottom.center*/
+
+
+
+ 
