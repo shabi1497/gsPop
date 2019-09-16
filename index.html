@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jquery.js"></script>
+<script src="gspop.js"></script>
+<link rel="stylesheet" href="custom.css">
+
+</head>
+<body>
+
+<button id="here">click me</button>
+
+<img src="pic.jpg" alt="pic">
+<img src="pic.jpg" alt="pic">
+<script>
+
+$(document).ready(function(){
+
+
+var modal = $('.gs-Modal').gsPop();
+
+$('#here').on('click',function(){
+  modal.trigger('gspop.open');
+});
+
+});
+</script>
+
+    
+    <div class="gs-Modal">
+      <div class="gs-header">
+        <h2>
+          Confirmation Dialog
+        </h2>
+      </div>
+      <div class="gs-body">
+        <p>
+          Do you Confirm this Action?
+        </p>
+      </div>
+      <div class="gs-footer">
+        <button class="gs-confirm" >Confirm</button>
+        <button class="gs-cancel" >Cancel</button>
+      </div>
+    </div>
+    
+
+
+</body>
+</html>
