@@ -1,0 +1,45 @@
+.gs-Overlay {
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+}
+
+/* Modal Content */
+.gs-Modal {
+  z-index: 2;
+  padding: 0;
+  width: 35%;
+  left: -50%;
+}
+.gs-Modal.hide{
+  display: none;
+}
+.gs-Modal-Wrapper {
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.gspop-opened {
+  overflow: hidden;
+}
+
+/* Centered text */
+.gspop-modal-position{
+  position: absolute;
+  /* left:auto; */
+  top: 0%;
+  left: calc(50% - (35% / 2) - 20px); /* 35%- modal width, 20px - margin*/
+  margin: 20px;
+}
+
