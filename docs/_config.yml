@@ -1,38 +1,5 @@
-# Meta =======================================================================
-title: Focus - A minimal popup, modal, notification, overlay, drawer and dialogue window plugin
-description: A minimal popup, modal, notification, overlay, drawer and dialogue window plugin
-# Site =======================================================================
-name: Focus
-subtitle: Bloat free popups
-github_url: https://github.com/Elkfox/Focus
-download_url: https://github.com/Elkfox/Focus/archive/master.zip
-# demo_url: https://concrete-theme.myshopify.com
-# Navigation =================================================================
-nav:
-  - title: About
-    url: '#about'
-  - title: Features
-    url: '#features'
-  - title: Getting Started
-    url: '#getting-started'
-  - title: 'Javascript'
-    url: '#javascript'
-  - title: 'Examples'
-    url: '#examples'
-  - title: 'Options'
-    url: '#options'
-  - title: Styles
-    url: '#css'
-
-# Collections ================================================================
-collections:
-  documentation:
-    title: Documentation
-# Build settings =============================================================
-markdown: kramdown
+title: Cayman theme
+description: Cayman is a clean, responsive theme for GitHub Pages.
+show_downloads: true
+google_analytics:
 theme: jekyll-theme-cayman
-gems:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
