@@ -4,21 +4,42 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](./another-page.html).
+A minimal popup, modal jquery plugin.
 
-There should be whitespace between paragraphs.
+# How it works
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+*   Modals are built with HTML, CSS, and JavaScript.  
+*   Animation and position for the modal are done through JavaScript. So that user can modify based on their need
+*   To open the modal, there is a trigger event and when open and close modal will fire an event that can be cached by the user.
+*   Modal backdrop configuration added. This can be removed or added through configuration
 
-# Header 1
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+## Configuration details
+```js
+{   wrapperClasses: "",
+    modalClasses: "gspop-modal-position",
+    backdrop: {
+      show: true,
+      clickable: true
+    },
+    animate: {
+      apply: true,
+      hide: 'animated gp-flipOutX',
+      show: 'animated gp-flipIn'
+    },
+    bodyClass: "gspop-opened"
+}
+```
+- wrapperClasses - This will be used to attach classes to the modal wrapper
+- backdrop    - This will be used to attach classes to the modal wrapper
+  - show      - to hide and show the backdrop
+  - clickable - To enable and disable backdrop click
+- animate     - This will be used to attach classes to the modal wrapper
+  - apply     - to hide and show the backdrop
+  - hide      - Animation classes on hide
+  - show      - Animation classes on show
+- bodyClass   - Class that will be added when modal opened
 
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
 
 ### Header 3
 
