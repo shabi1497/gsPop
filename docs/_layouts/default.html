@@ -26,10 +26,9 @@
     <script src="{{ 'dist/gspop.js?v=' | append: site.github.build_revision | relative_url }}"></script>
     <script src="{{ 'dist/demo.js?v=' | append: site.github.build_revision | relative_url }}"></script>
   </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-
+  <body>   
     <header class="page-header" role="banner">
+      <a  href="second.html">Skip to the content.</a>
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       {% if site.github.is_project_page %}
