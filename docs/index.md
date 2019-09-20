@@ -39,15 +39,33 @@ This will helop to do animation and to position the modal(top/center/bottom/righ
 - bodyClass   - Class that will be added to body when modal opened
 
 
-### Header 3
+### Default Configuration
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
+```html
+<div class="gs-Modal hide" id="gs-Modal-default">
+      <div class="gs-header">
+        <h2>
+          Confirmation Dialog
+        </h2>
+      </div>
+      <div class="gs-body">
+        <p>
+          Do you Confirm this Action?
+        </p>
+      </div>
+      <div class="gs-footer">
+        <button class="gs-confirm" >Confirm</button>
+        <button class="gs-cancel" >Cancel</button>
+      </div>
+ </div>
 ```
+```js
+var modal = $('#gs-Modal-default').gsPop();
+        $('#default-config-btn').on('click',function(){
+          modal.trigger('gspop.open');
+        });
+```
+<a class="btn" id='default-config-btn'>open</a>
 
 ```ruby
 # Ruby code with syntax highlighting
