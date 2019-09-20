@@ -1,22 +1,20 @@
----
-layout: default
----
-
-Text can be **bold**, _italic_, or ~~strikethrough~~.
-
 A minimal popup, modal jquery plugin.
 
 # How it works
 
 *   Modals are built with HTML, CSS, and JavaScript.  
-*   Animation and position for the modal are done through JavaScript. So that user can modify based on their need
-*   To open the modal, there is a trigger event and when open and close modal will fire an event that can be cached by the user.
+*   Animation and position for the modal are done through CSS. So that user can modify based on their need
+*   To open the modal, there is a trigger event and when open and close modal, there will be some events (gsmodal.shown/gsmodal.hidden) that can be cached by the user.
 *   Modal backdrop configuration added. This can be removed or added through configuration
 
 
 ## Configuration details
+The following are the default configurations. These CSS classes will be added to the modal when open and will be removed on close. 
+This will helop to do animation and to position the modal(top/center/bottom/right/left). Everything controlled by css classes.
+
 ```js
-{   wrapperClasses: "",
+{   
+    wrapperClasses: "",
     modalClasses: "gspop-modal-position",
     backdrop: {
       show: true,
@@ -31,14 +29,14 @@ A minimal popup, modal jquery plugin.
 }
 ```
 - wrapperClasses - This will be used to attach classes to the modal wrapper
-- backdrop    - This will be used to attach classes to the modal wrapper
+- backdrop    - This will be used to attach classes to the inner modal
   - show      - to hide and show the backdrop
   - clickable - To enable and disable backdrop click
-- animate     - This will be used to attach classes to the modal wrapper
+- animate     - animation configuration
   - apply     - to hide and show the backdrop
   - hide      - Animation classes on hide
   - show      - Animation classes on show
-- bodyClass   - Class that will be added when modal opened
+- bodyClass   - Class that will be added to body when modal opened
 
 
 ### Header 3
