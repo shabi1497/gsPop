@@ -65,7 +65,9 @@ var modal = $('#gs-Modal-default').gsPop();
           modal.trigger('gspop.open');
         });
 ```
-<a class="btn" id='default-config-btn'>open</a>
+ action_item do
+    link_to :create_user, new_user_path
+ end
 
 ```ruby
 # Ruby code with syntax highlighting
