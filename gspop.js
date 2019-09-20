@@ -1,8 +1,8 @@
 ; (function ($) {
   var defaults =
   {
-    wrapperClasses: "", 
-    modalClasses: "gspop-modal-position", 
+    wrapperClasses: "",
+    modalClasses: "gspop-modal-position",
     backdrop: {
       show: true,
       clickable: true
@@ -57,7 +57,7 @@
         });
       }
   }
-  
+
   /* add events for the plugin*/
   gsPop.prototype.close = function() {
     this.element.trigger('gspop.close');
