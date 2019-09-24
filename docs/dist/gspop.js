@@ -65,15 +65,18 @@
 
   gsPop.prototype.init = function () {
     var $element = this.element;
-    $element.wrap("<div class='gs-Modal-Wrapper "+ this.options.wrapperClasses+"'></div>");
-    $element.addClass(this.options.modalClasses + " "+ config.modalPosition);
-
-    if(this.options.backdrop.show) $(`<div class='gs-Overlay'></div>`).appendTo(this.element.parent('.gs-Modal-Wrapper'));
-    $element.parent().hide();
-    // to avoid unnecessary hide and shadow
-    // By default, user need to add this in their template
-    $element.removeClass('hide');
-    $element.parent('.gs-Modal-Wrapper').appendTo('body');
+    if($element.parent('.gs-Modal-Wrapper').length<=0) {
+      $element.wrap("<div class='gs-Modal-Wrapper "+ this.options.wrapperClasses+"'></div>");
+      $element.addClass(this.options.modalClasses + " "+ config.modalPosition);
+  
+      if(this.options.backdrop.show) $(`<div class='gs-Overlay'></div>`).appendTo(this.element.parent('.gs-Modal-Wrapper'));
+      $element.parent('.gs-Modal-Wrapper').hide();
+      // to avoid unnecessary hide and shadow
+      // By default, user need to add this in their template
+      $element.removeClass('hide');
+      $element.parent('.gs-Modal-Wrapper').appendTo('body');
+    }
+   
     this.toggle();
   }
 
