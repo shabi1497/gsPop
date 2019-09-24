@@ -68,11 +68,16 @@ var modal = $('#gs-Modal-default').gsPop();
           modal.trigger('gspop.open');
         });
 ```
-{% include second.html %}
 
-The repository this demo is hosted in is [{{ site.github.repository_url}}]({{ site.github.repository_url}})
+fdsfsd
+<table>
+    <tr>
+        <td>Foo</td>
+    </tr>
+</table>
 
-<button> test </button>
+sdfs
+
  action_item do
     link_to :create_user, new_user_path
  end
