@@ -16,9 +16,9 @@
           var animeIn = $('#anime-in').val();
           var animeOut = $('#anime-out').val();
           var position = $('#position').val();
-          
+
           $('#gs-Modal-default').gsPop({
-            wrapperClasses: position,
+            wrapperClasses: "gspop-position "+position,
             animate: {
               apply: true,
               hide: 'animated '+animeOut,
