@@ -4,9 +4,9 @@
   display: flex;
 }
 .gspop-position .gspop-modal-position{
-    top:auto;
     left: auto;
-    margin: auto;
+    top:auto;
+    position: relative;
 }
 .gspop-position.gspop-center-center{
   -webkit-box-align: center;
