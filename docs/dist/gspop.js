@@ -68,7 +68,7 @@
     $element.wrap("<div class='gs-Modal-Wrapper "+ this.options.wrapperClasses+"'></div>");
     $element.addClass(this.options.modalClasses + " "+ config.modalPosition);
 
-    if(this.options.backdrop.show) $(`<div class='gs-Overlay'></div>`).appendTo('.gs-Modal-Wrapper');
+    if(this.options.backdrop.show) $(`<div class='gs-Overlay'></div>`).appendTo(this.element.parent('.gs-Modal-Wrapper'));
     $element.parent().hide();
     // to avoid unnecessary hide and shadow
     // By default, user need to add this in their template
