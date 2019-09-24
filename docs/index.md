@@ -65,6 +65,7 @@ var modal = $('#gs-Modal-default').gsPop();
           modal.trigger('gspop.open');
         });
 ```
+{% include second.html %}
 
 The repository this demo is hosted in is [{{ site.github.repository_url}}]({{ site.github.repository_url}})
 
