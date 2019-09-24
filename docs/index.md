@@ -1,6 +1,3 @@
----
----
-
 A minimal popup, modal jquery plugin.
 
 # How it works
