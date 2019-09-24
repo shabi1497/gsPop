@@ -1,7 +1,4 @@
 ---
-layout: default
-title: Implementations
-comments: true
 ---
 
 A minimal popup, modal jquery plugin.
