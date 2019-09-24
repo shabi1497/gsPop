@@ -69,14 +69,27 @@ var modal = $('#gs-Modal-default').gsPop();
         });
 ```
 
-fdsfsd
-<table>
-    <tr>
-        <td>Foo</td>
-    </tr>
-</table>
+<div class="gs-Modal hide" id="gs-Modal-default">
+      <div class="gs-header">
+        <h2>
+          Confirmation Dialog
+        </h2>
+      </div>
+      <div class="gs-body">
+        <p>
+          Do you Confirm this Action?
+        </p>
+      </div>
+      <div class="gs-footer">
+        <button class="gs-confirm" >Confirm</button>
+        <button class="gs-cancel" >Cancel</button>
+      </div>
+ </div>
 
-sdfs
+Default modal
+<button type="button" id="default-config-btn">Click Me!</button>
+
+
 
  action_item do
     link_to :create_user, new_user_path
