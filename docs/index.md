@@ -65,9 +65,6 @@ var modal = $('#gs-Modal-default').gsPop();
           modal.trigger('gspop.open');
         });
 ```
-{% include second.html %}
-
-Modal starts here
 <div class="gs-Modal hide" id="gs-Modal-default">
       <div class="gs-header">
         <h2>
@@ -85,7 +82,6 @@ Modal starts here
       </div>
  </div>
 
-Default modal
 <button class="ui secondary button" id="default-config-btn">
   Click Me!
 </button>

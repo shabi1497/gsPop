@@ -1,7 +1,7 @@
 
     $(document).ready(function(){
         var modal = $('#gs-Modal-default').gsPop();
-        $('#here').on('click',function(){
+        $('#default-config-btn').on('click',function(){
           modal.trigger('gspop.open');
         });
 
