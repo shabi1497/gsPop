@@ -106,10 +106,22 @@ var modal = $('#gs-Modal-default').gsPop();
       </div>
  </div>
 ```
+Animation can be defined for each modal and can be applied.
 ```js
-var modal = $('#gs-Modal-anime').gsPop();
-        $('#anime-config-btn').on('click',function(){
-          modal.trigger('gspop.open');
+  $('#anime-config-btn').on('click',function(){
+          var animeIn = $('#anime-in').val();
+          var animeOut = $('#anime-out').val();
+          var position = $('#position').val();
+          
+          $('#gs-Modal-default').gsPop({
+            wrapperClasses: position,
+            animate: {
+              apply: true,
+              hide: 'animated '+animeOut,
+              show: 'animated '+animeIn
+            }
+          }).trigger('gspop.open');
+         
         });
 ```
   <div class="container">
