@@ -65,6 +65,9 @@ var modal = $('#gs-Modal-default').gsPop();
           modal.trigger('gspop.open');
         });
 ```
+
+The repository this demo is hosted in is [{{ site.github.repository_url}}]({{ site.github.repository_url}})
+
  action_item do
     link_to :create_user, new_user_path
  end
