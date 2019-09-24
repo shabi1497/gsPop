@@ -1,6 +1,7 @@
 ---
-layout: post
-title: Blogging Like a Hacker
+layout: default
+title: Implementations
+comments: true
 ---
 
 A minimal popup, modal jquery plugin.
