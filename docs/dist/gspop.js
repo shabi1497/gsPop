@@ -75,6 +75,9 @@
       // By default, user need to add this in their template
       $element.removeClass('hide');
       $element.parent('.gs-Modal-Wrapper').appendTo('body');
+    } else{
+      $element.parent('.gs-Modal-Wrapper').addClass(this.options.wrapperClasses);
+      $element.addClass(this.options.modalClasses + " "+ config.modalPosition);
     }
    
     this.toggle();
@@ -159,6 +162,7 @@
                   this.options.modalClasses + " " +
                   config.modalPosition;
     this.element.removeClass(classes);
+    this.element.parent('.gs-Modal-Wrapper').addClass(this.options.wrapperClasses);
   }
 
   $.fn.gsPop = function (options) {
