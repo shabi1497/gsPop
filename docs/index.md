@@ -87,7 +87,7 @@ var modal = $('#gs-Modal-default').gsPop();
  </div>
 
 Default modal
-<button type="button" id="default-config-btn">Click Me!</button>
+<button type="button" id="default-config-btn" class="btn">Click Me!</button>
 
 
 
