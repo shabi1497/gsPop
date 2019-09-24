@@ -113,6 +113,8 @@ var modal = $('#gs-Modal-anime').gsPop();
         });
 ```
   <div class="container">
+
+<div class="row"><div  class="col-3">Animate In</div>  <div  class="col-3">Animate Out</div>  <div  class="col-3">Position</div>  </div>
       <div class="row">
         <div class="col-3">
           <select class="ui dropdown" id="anime-in">
@@ -128,7 +130,6 @@ var modal = $('#gs-Modal-anime').gsPop();
               <option value="jello">jello</option>
               <option value="heartBeat">heartBeat</option>
             </optgroup>
-
             <optgroup label="Bouncing Entrances">
               <option value="bounceIn">bounceIn</option>
               <option value="bounceInDown">bounceInDown</option>
@@ -136,7 +137,6 @@ var modal = $('#gs-Modal-anime').gsPop();
               <option value="bounceInRight">bounceInRight</option>
               <option value="bounceInUp">bounceInUp</option>
             </optgroup>
-
             <optgroup label="Bouncing Exits">
               <option value="bounceOut">bounceOut</option>
               <option value="bounceOutDown">bounceOutDown</option>
@@ -144,7 +144,6 @@ var modal = $('#gs-Modal-anime').gsPop();
               <option value="bounceOutRight">bounceOutRight</option>
               <option value="bounceOutUp">bounceOutUp</option>
             </optgroup>
-
             <optgroup label="Fading Entrances">
               <option value="fadeIn">fadeIn</option>
               <option value="fadeInDown">fadeInDown</option>
@@ -156,7 +155,6 @@ var modal = $('#gs-Modal-anime').gsPop();
               <option value="fadeInUp">fadeInUp</option>
               <option value="fadeInUpBig">fadeInUpBig</option>
             </optgroup>
-
             <optgroup label="Fading Exits">
               <option value="fadeOut">fadeOut</option>
               <option value="fadeOutDown">fadeOutDown</option>
@@ -168,7 +166,6 @@ var modal = $('#gs-Modal-anime').gsPop();
               <option value="fadeOutUp">fadeOutUp</option>
               <option value="fadeOutUpBig">fadeOutUpBig</option>
             </optgroup>
-
             <optgroup label="Flippers">
               <option value="flip">flip</option>
               <option value="flipInX">flipInX</option>
@@ -176,12 +173,10 @@ var modal = $('#gs-Modal-anime').gsPop();
               <option value="flipOutX">flipOutX</option>
               <option value="flipOutY">flipOutY</option>
             </optgroup>
-
             <optgroup label="Lightspeed">
               <option value="lightSpeedIn">lightSpeedIn</option>
               <option value="lightSpeedOut">lightSpeedOut</option>
             </optgroup>
-
             <optgroup label="Rotating Entrances">
               <option value="rotateIn">rotateIn</option>
               <option value="rotateInDownLeft">rotateInDownLeft</option>
@@ -189,7 +184,6 @@ var modal = $('#gs-Modal-anime').gsPop();
               <option value="rotateInUpLeft">rotateInUpLeft</option>
               <option value="rotateInUpRight">rotateInUpRight</option>
             </optgroup>
-
             <optgroup label="Rotating Exits">
               <option value="rotateOut">rotateOut</option>
               <option value="rotateOutDownLeft">rotateOutDownLeft</option>
@@ -197,30 +191,25 @@ var modal = $('#gs-Modal-anime').gsPop();
               <option value="rotateOutUpLeft">rotateOutUpLeft</option>
               <option value="rotateOutUpRight">rotateOutUpRight</option>
             </optgroup>
-
             <optgroup label="Sliding Entrances">
               <option value="slideInUp">slideInUp</option>
               <option value="slideInDown">slideInDown</option>
               <option value="slideInLeft">slideInLeft</option>
               <option value="slideInRight">slideInRight</option>
-
             </optgroup>
             <optgroup label="Sliding Exits">
               <option value="slideOutUp">slideOutUp</option>
               <option value="slideOutDown">slideOutDown</option>
               <option value="slideOutLeft">slideOutLeft</option>
               <option value="slideOutRight">slideOutRight</option>
-              
-            </optgroup>
-            
+            </optgroup>            
             <optgroup label="Zoom Entrances">
               <option value="zoomIn">zoomIn</option>
               <option value="zoomInDown">zoomInDown</option>
               <option value="zoomInLeft">zoomInLeft</option>
               <option value="zoomInRight">zoomInRight</option>
               <option value="zoomInUp">zoomInUp</option>
-            </optgroup>
-            
+            </optgroup>            
             <optgroup label="Zoom Exits">
               <option value="zoomOut">zoomOut</option>
               <option value="zoomOutDown">zoomOutDown</option>
@@ -228,7 +217,6 @@ var modal = $('#gs-Modal-anime').gsPop();
               <option value="zoomOutRight">zoomOutRight</option>
               <option value="zoomOutUp">zoomOutUp</option>
             </optgroup>
-
             <optgroup label="Specials">
               <option value="hinge">hinge</option>
               <option value="jackInTheBox">jackInTheBox</option>
@@ -251,7 +239,6 @@ var modal = $('#gs-Modal-anime').gsPop();
                   <option value="jello">jello</option>
                   <option value="heartBeat">heartBeat</option>
                 </optgroup>
-
                 <optgroup label="Bouncing Entrances">
                   <option value="bounceIn">bounceIn</option>
                   <option value="bounceInDown">bounceInDown</option>
@@ -259,7 +246,6 @@ var modal = $('#gs-Modal-anime').gsPop();
                   <option value="bounceInRight">bounceInRight</option>
                   <option value="bounceInUp">bounceInUp</option>
                 </optgroup>
-
                 <optgroup label="Bouncing Exits">
                   <option value="bounceOut">bounceOut</option>
                   <option value="bounceOutDown">bounceOutDown</option>
@@ -267,7 +253,6 @@ var modal = $('#gs-Modal-anime').gsPop();
                   <option value="bounceOutRight">bounceOutRight</option>
                   <option value="bounceOutUp">bounceOutUp</option>
                 </optgroup>
-
                 <optgroup label="Fading Entrances">
                   <option value="fadeIn">fadeIn</option>
                   <option value="fadeInDown">fadeInDown</option>
@@ -279,7 +264,6 @@ var modal = $('#gs-Modal-anime').gsPop();
                   <option value="fadeInUp">fadeInUp</option>
                   <option value="fadeInUpBig">fadeInUpBig</option>
                 </optgroup>
-
                 <optgroup label="Fading Exits">
                   <option value="fadeOut">fadeOut</option>
                   <option value="fadeOutDown">fadeOutDown</option>
@@ -291,7 +275,6 @@ var modal = $('#gs-Modal-anime').gsPop();
                   <option value="fadeOutUp">fadeOutUp</option>
                   <option value="fadeOutUpBig">fadeOutUpBig</option>
                 </optgroup>
-
                 <optgroup label="Flippers">
                   <option value="flip">flip</option>
                   <option value="flipInX">flipInX</option>
@@ -299,12 +282,10 @@ var modal = $('#gs-Modal-anime').gsPop();
                   <option value="flipOutX">flipOutX</option>
                   <option value="flipOutY">flipOutY</option>
                 </optgroup>
-
                 <optgroup label="Lightspeed">
                   <option value="lightSpeedIn">lightSpeedIn</option>
                   <option value="lightSpeedOut">lightSpeedOut</option>
                 </optgroup>
-
                 <optgroup label="Rotating Entrances">
                   <option value="rotateIn">rotateIn</option>
                   <option value="rotateInDownLeft">rotateInDownLeft</option>
@@ -312,7 +293,6 @@ var modal = $('#gs-Modal-anime').gsPop();
                   <option value="rotateInUpLeft">rotateInUpLeft</option>
                   <option value="rotateInUpRight">rotateInUpRight</option>
                 </optgroup>
-
                 <optgroup label="Rotating Exits">
                   <option value="rotateOut">rotateOut</option>
                   <option value="rotateOutDownLeft">rotateOutDownLeft</option>
@@ -320,22 +300,18 @@ var modal = $('#gs-Modal-anime').gsPop();
                   <option value="rotateOutUpLeft">rotateOutUpLeft</option>
                   <option value="rotateOutUpRight">rotateOutUpRight</option>
                 </optgroup>
-
                 <optgroup label="Sliding Entrances">
                   <option value="slideInUp">slideInUp</option>
                   <option value="slideInDown">slideInDown</option>
                   <option value="slideInLeft">slideInLeft</option>
                   <option value="slideInRight">slideInRight</option>
-
                 </optgroup>
                 <optgroup label="Sliding Exits">
                   <option value="slideOutUp">slideOutUp</option>
                   <option value="slideOutDown">slideOutDown</option>
                   <option value="slideOutLeft">slideOutLeft</option>
                   <option value="slideOutRight">slideOutRight</option>
-                  
                 </optgroup>
-                
                 <optgroup label="Zoom Entrances">
                   <option value="zoomIn">zoomIn</option>
                   <option value="zoomInDown">zoomInDown</option>
@@ -343,7 +319,6 @@ var modal = $('#gs-Modal-anime').gsPop();
                   <option value="zoomInRight">zoomInRight</option>
                   <option value="zoomInUp">zoomInUp</option>
                 </optgroup>
-                
                 <optgroup label="Zoom Exits">
                   <option value="zoomOut">zoomOut</option>
                   <option value="zoomOutDown">zoomOutDown</option>
@@ -351,7 +326,6 @@ var modal = $('#gs-Modal-anime').gsPop();
                   <option value="zoomOutRight">zoomOutRight</option>
                   <option value="zoomOutUp">zoomOutUp</option>
                 </optgroup>
-
                 <optgroup label="Specials">
                   <option value="hinge">hinge</option>
                   <option value="jackInTheBox">jackInTheBox</option>
