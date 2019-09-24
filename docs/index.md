@@ -124,6 +124,22 @@ Animation can be defined for each modal and can be applied.
          
         });
 ```
+<div class="gs-Modal hide" id="gs-Modal-anime">
+      <div class="gs-header">
+        <h2>
+          Confirmation Dialog
+        </h2>
+      </div>
+      <div class="gs-body">
+        <p>
+          Do you Confirm this Action?
+        </p>
+      </div>
+      <div class="gs-footer">
+        <button class="gs-confirm" >Confirm</button>
+        <button class="gs-cancel" >Cancel</button>
+      </div>
+ </div>
   <div class="container">
 
 <div class="row"><div  class="col-3">Animate In</div>  <div  class="col-3">Animate Out</div>  <div  class="col-3">Position</div>  </div>
