@@ -68,8 +68,9 @@ var modal = $('#gs-Modal-default').gsPop();
           modal.trigger('gspop.open');
         });
 ```
-{% second html %}
+{% include second.html %}
 
+Modal starts here
 <div class="gs-Modal hide" id="gs-Modal-default">
       <div class="gs-header">
         <h2>
@@ -88,9 +89,11 @@ var modal = $('#gs-Modal-default').gsPop();
  </div>
 
 Default modal
-<button type="button" id="default-config-btn" class="btn">Click Me!</button>
+<button class="ui secondary button" id="default-config-btn">
+  Click Me!
+</button>
 
-  {% include second.html %}
+Modal ends here
 
  action_item do
     link_to :create_user, new_user_path
