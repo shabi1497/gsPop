@@ -90,7 +90,7 @@ var modal = $('#gs-Modal-default').gsPop();
 Default modal
 <button type="button" id="default-config-btn" class="btn">Click Me!</button>
 
-
+  {% include second.html %}
 
  action_item do
     link_to :create_user, new_user_path
