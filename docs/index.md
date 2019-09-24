@@ -68,6 +68,7 @@ var modal = $('#gs-Modal-default').gsPop();
           modal.trigger('gspop.open');
         });
 ```
+{% second html %}
 
 <div class="gs-Modal hide" id="gs-Modal-default">
       <div class="gs-header">
