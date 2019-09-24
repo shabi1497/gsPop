@@ -346,15 +346,18 @@ var modal = $('#gs-Modal-anime').gsPop();
             <option value="gspop-bottom-left">gspop-bottom-left</option>
           </select>
         </div>
+        <div class="col-3">
+          <button class="ui secondary button" id="anime-config-btn">
+            Click Me!
+          </button>
+        </div>
       </div>
     </div>
 
 
 
 
-<button class="ui secondary button" id="anime-config-btn">
-  Click Me!
-</button>
+
 
 ```ruby
 # Ruby code with syntax highlighting
