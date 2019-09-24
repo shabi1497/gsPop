@@ -73,7 +73,7 @@
     // to avoid unnecessary hide and shadow
     // By default, user need to add this in their template
     $element.removeClass('hide');
-    $element.appendTo('body');
+    $element.parent('.gs-Modal-Wrapper').appendTo('body');
     this.toggle();
   }
 
