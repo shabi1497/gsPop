@@ -1,3 +1,8 @@
+---
+layout: post
+title: Blogging Like a Hacker
+---
+
 A minimal popup, modal jquery plugin.
 
 # How it works
