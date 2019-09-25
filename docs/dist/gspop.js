@@ -163,7 +163,7 @@
                   this.options.modalClasses + " " +
                   config.modalPosition;
     this.element.removeClass(classes);
-    this.element.parent('.gs-Modal-Wrapper').addClass(this.options.wrapperClasses);
+    this.element.parent('.gs-Modal-Wrapper').removeClass(this.options.wrapperClasses);
   }
 
   $.fn.gsPop = function (options) {
