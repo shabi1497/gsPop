@@ -41,7 +41,7 @@
     });
 
     /* Open event */
-    $element.off('gspop.close').on('gspop.open', function()  {
+    $element.off('gspop.open').on('gspop.open', function()  {
         self.toggle(true);
     });
 
