@@ -266,6 +266,8 @@ Animation can be defined for each modal and can be applied.
         <div class="col-3">
           <select class="ui dropdown" id="position">
             <option value="gspop-center-center">gspop-center-center</option>
+            <option value="gspop-center-right">gspop-center-right</option>
+            <option value="gspop-center-left">gspop-center-left</option>
             <option value="gspop-top-center">gspop-top-center</option>
             <option value="gspop-top-left">gspop-top-left</option>
             <option value="gspop-top-right">gspop-top-right</option>
