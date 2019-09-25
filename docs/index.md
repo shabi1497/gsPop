@@ -34,7 +34,14 @@ This will helop to do animation and to position the modal(top/center/bottom/righ
   hide - we should hide by default. If not then there will be a jerk
   gs-cancel - To cancel the modal pop up we need to add this class
 ```
-
+``` Events
+  User events
+  gspop.shown  - User events that can be cached
+  gspop.hidden - User events that can be cached
+  
+  gspop.close - to close the modal from outside
+  gspop.open  - to open the modal from outside
+```
 * wrapperClasses - This will be used to attach classes to the modal wrapper
 * backdrop    - This will be used to attach classes to the inner modal
   + show      - to hide and show the backdrop
