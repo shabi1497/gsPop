@@ -49,7 +49,7 @@
     if(self.options.animate.apply) {
         $element.on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
           if(!$element.data().showModal) {
-            self.element.parent().hide();
+            self.hideModal();
             self.clean();
             self.triggerHidden();
           }
@@ -164,6 +164,7 @@
                   config.modalPosition;
     this.element.removeClass(classes);
     this.element.parent('.gs-Modal-Wrapper').removeClass(this.options.wrapperClasses);
+    this.element.parent().hide();
     $('body').removeClass(this.options.bodyClass);
   }
 
