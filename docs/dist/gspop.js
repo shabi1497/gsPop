@@ -23,9 +23,10 @@
   function gsPop(element, options) {
     this.element = $(element);
     this.options = $.extend(true, {}, defaults, options);
-    this.init();
+    
     // Bind events
     this.bindEvents();
+    this.init();
   }
 
   /* add events for the plugin*/
