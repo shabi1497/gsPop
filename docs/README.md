@@ -1,109 +1,311 @@
-# The Cayman theme
+A minimal popup, modal jquery plugin.
+# How it works
 
-[![Build Status](https://travis-ci.org/pages-themes/cayman.svg?branch=master)](https://travis-ci.org/pages-themes/cayman) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-cayman.svg)](https://badge.fury.io/rb/jekyll-theme-cayman)
+*   Modals are built with HTML, CSS, and JavaScript.
+*   Animation and position for the modal are done through CSS. So that user can modify based on their need
+*   To open the modal, there is a trigger event and when open and close modal, there will be some events (gsmodal.shown/gsmodal.hidden) that can be cached by the user.
+*   Modal backdrop configuration added. This can be removed or added through configuration
 
-*Cayman is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/cayman), or even [use it today](#usage).*
+## Configuration details
 
-![Thumbnail of Cayman](thumbnail.png)
+The following are the default configurations. These CSS classes will be added to the modal when open and will be removed on close.
+This will helop to do animation and to position the modal(top/center/bottom/right/left). Everything controlled by css classes.
 
-## Usage
-
-To use the Cayman theme:
-
-1. Add the following to your site's `_config.yml`:
-
-    ```yml
-    theme: jekyll-theme-cayman
-    ```
-
-2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
-
-    ```ruby
-    gem "github-pages", group: :jekyll_plugins
-    ```
-
-## Customizing
-
-### Configuration variables
-
-Cayman will respect the following variables, if set in your site's `_config.yml`:
-
-```yml
-title: [The title of your site]
-description: [A short description of your site's purpose]
+``` js
+{
+    wrapperClasses: "",
+    modalClasses: "gspop-modal-position",
+    backdrop: {
+        show: true,
+        clickable: true
+    },
+    animate: {
+        apply: true,
+        hide: 'animated gp-flipOutX',
+        show: 'animated gp-flipIn'
+    },
+    bodyClass: "gspop-opened"
+}
 ```
 
-Additionally, you may choose to set the following optional variables:
-
-```yml
-show_downloads: ["true" or "false" to indicate whether to provide a download URL]
-google_analytics: [Your Google Analytics tracking ID]
+``` html
+  The following classes are needed for modal pop to work properly
+  gs-Modal - is needed
+  hide - we should hide by default. If not then there will be a jerk
+  gs-cancel - To cancel the modal pop up we need to add this class
 ```
 
-### Stylesheet
+* wrapperClasses - This will be used to attach classes to the modal wrapper
+* backdrop    - This will be used to attach classes to the inner modal
+  + show      - to hide and show the backdrop
+  + clickable - To enable and disable backdrop click
+* animate     - animation configuration
+  + apply     - to hide and show the backdrop
+  + hide      - Animation classes on hide
+  + show      - Animation classes on show
+* bodyClass   - Class that will be added to body when modal opened
 
-If you'd like to add your own custom styles:
+### Default Configuration
 
-1. Create a file called `/assets/css/style.scss` in your site
-2. Add the following content to the top of the file, exactly as shown:
-    ```scss
-    ---
-    ---
+``` html
+<div class="gs-Modal hide" id="gs-Modal-default">
+    <div class="gs-header">
+        <h2>
+            Confirmation Dialog
+        </h2>
+    </div>
+    <div class="gs-body">
+        <p>
+            Do you Confirm this Action?
+        </p>
+    </div>
+    <div class="gs-footer">
+        <button class="gs-confirm">Confirm</button>
+        <button class="gs-cancel">Cancel</button>
+    </div>
+</div>
+```
 
-    @import "{{ site.theme }}";
-    ```
-3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
+``` js
+var modal = $('#gs-Modal-default').gsPop();
+$('#default-config-btn').on('click', function() {
+    modal.trigger('gspop.open');
+});
+```
 
-*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
+<div class="gs-Modal hide" id="gs-Modal-default">
+    <div class="gs-header">
+        <h2>
+            Confirmation Dialog
+        </h2>
 
-### Layouts
+    </div>
 
-If you'd like to change the theme's HTML layout:
+    <div class="gs-body">
+        <p>
+            Do you Confirm this Action?
+        </p>
 
-1. [Copy the original template](https://github.com/pages-themes/cayman/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-2. Create a file called `/_layouts/default.html` in your site
-3. Paste the default layout content copied in the first step
-4. Customize the layout as you'd like
+    </div>
 
-### Overriding GitHub-generated URLs
+    <div class="gs-footer">
+        <button class="gs-confirm">Confirm</button>
+        <button class="gs-cancel">Cancel</button>
 
-Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
+    </div>
 
-1. Look at [the template source](https://github.com/pages-themes/cayman/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
-2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
-    ```yml
-    github:
-      zip_url: http://example.com/download.zip
-      another_url: another value
-    ```
-3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
+</div>
 
-*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
+<button class="ui secondary button" id="default-config-btn">
+  Click Me!
+</button>
 
-For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
+### Animation and Position
 
-## Roadmap
+``` html
+<div class="gs-Modal hide" id="gs-Modal-anime">
+    <div class="gs-header">
+        <h2>
+            Confirmation Dialog
+        </h2>
+    </div>
+    <div class="gs-body">
+        <p>
+            Do you Confirm this Action?
+        </p>
+    </div>
+    <div class="gs-footer">
+        <button class="gs-confirm">Confirm</button>
+        <button class="gs-cancel">Cancel</button>
+    </div>
+</div>
+```
 
-See the [open issues](https://github.com/pages-themes/cayman/issues) for a list of proposed features (and known issues).
+Animation can be defined for each modal and can be applied.
 
-## Project philosophy
+``` js
+  $('#anime-config-btn').on('click', function() {
+      var animeIn = $('#anime-in').val();
+      var animeOut = $('#anime-out').val();
+      var position = $('#position').val();
 
-The Cayman theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+      $('#gs-Modal-default').gsPop({
+          wrapperClasses: position,
+          animate: {
+              apply: true,
+              hide: 'animated ' + animeOut,
+              show: 'animated ' + animeIn
+          }
+      }).trigger('gspop.open');
 
-## Contributing
+  });
+```
 
-Interested in contributing to Cayman? We'd love your help. Cayman is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
+<div class="gs-Modal hide" id="gs-Modal-anime">
+    <div class="gs-header">
+        <h2>
+            Confirmation Dialog
+        </h2>
+    </div>
+    <div class="gs-body">
+        <p>
+            Do you Confirm this Action?
+        </p>
+    </div>
+    <div class="gs-footer">
+        <button class="gs-confirm">Confirm</button>
+        <button class="gs-cancel">Cancel</button>
+    </div>
+</div>
+  <div class="container">
 
-### Previewing the theme locally
+<div class="row">
+    <div  class="col-4">Animate In</div>
+    <div  class="col-4">Animate Out</div>
+    <div  class="col-4">Position</div>
+</div>
+      <div class="row">
+        <div class="col-4">
+          <select class="ui dropdown" id="anime-in">
+            <optgroup label="Attention Seekers">
+              <option value="bounce">bounce</option>
+              <option value="flash">flash</option>
+              <option value="pulse">pulse</option>
+              <option value="rubberBand">rubberBand</option>
+              <option value="shake">shake</option>
+              <option value="swing">swing</option>
+              <option value="tada">tada</option>
+              <option value="wobble">wobble</option>
+              <option value="jello">jello</option>
+              <option value="heartBeat">heartBeat</option>
+            </optgroup>
+            <optgroup label="Bouncing Entrances">
+              <option value="bounceIn">bounceIn</option>
+              <option value="bounceInDown">bounceInDown</option>
+              <option value="bounceInLeft">bounceInLeft</option>
+              <option value="bounceInRight">bounceInRight</option>
+              <option value="bounceInUp">bounceInUp</option>
+            </optgroup>
+            <optgroup label="Fading Entrances">
+              <option value="fadeIn">fadeIn</option>
+              <option value="fadeInDown">fadeInDown</option>
+              <option value="fadeInDownBig">fadeInDownBig</option>
+              <option value="fadeInLeft">fadeInLeft</option>
+              <option value="fadeInLeftBig">fadeInLeftBig</option>
+              <option value="fadeInRight">fadeInRight</option>
+              <option value="fadeInRightBig">fadeInRightBig</option>
+              <option value="fadeInUp">fadeInUp</option>
+              <option value="fadeInUpBig">fadeInUpBig</option>
+            </optgroup>
+            <optgroup label="Flippers">
+              <option value="flip">flip</option>
+              <option value="flipInX">flipInX</option>
+              <option value="flipInY">flipInY</option>
+            </optgroup>
+            <optgroup label="Lightspeed">
+              <option value="lightSpeedIn">lightSpeedIn</option>
+            </optgroup>
+            <optgroup label="Rotating Entrances">
+              <option value="rotateIn">rotateIn</option>
+              <option value="rotateInDownLeft">rotateInDownLeft</option>
+              <option value="rotateInDownRight">rotateInDownRight</option>
+              <option value="rotateInUpLeft">rotateInUpLeft</option>
+              <option value="rotateInUpRight">rotateInUpRight</option>
+            </optgroup>
+            <optgroup label="Sliding Entrances">
+              <option value="slideInUp">slideInUp</option>
+              <option value="slideInDown">slideInDown</option>
+              <option value="slideInLeft">slideInLeft</option>
+              <option value="slideInRight">slideInRight</option>
+            </optgroup>         
+            <optgroup label="Zoom Entrances">
+              <option value="zoomIn">zoomIn</option>
+              <option value="zoomInDown">zoomInDown</option>
+              <option value="zoomInLeft">zoomInLeft</option>
+              <option value="zoomInRight">zoomInRight</option>
+              <option value="zoomInUp">zoomInUp</option>
+            </optgroup>  
+            <optgroup label="Specials">
+              <option value="jackInTheBox">jackInTheBox</option>
+              <option value="rollOut">rollOut</option>
+            </optgroup>
+      </select>
+        </div>
+        <div class="col-4">
+          <select class="ui dropdown"  id="anime-out">
+                <optgroup label="Bouncing Exits">
+                  <option value="bounceOut">bounceOut</option>
+                  <option value="bounceOutDown">bounceOutDown</option>
+                  <option value="bounceOutLeft">bounceOutLeft</option>
+                  <option value="bounceOutRight">bounceOutRight</option>
+                  <option value="bounceOutUp">bounceOutUp</option>
+                </optgroup>
+                <optgroup label="Fading Exits">
+                  <option value="fadeOut">fadeOut</option>
+                  <option value="fadeOutDown">fadeOutDown</option>
+                  <option value="fadeOutDownBig">fadeOutDownBig</option>
+                  <option value="fadeOutLeft">fadeOutLeft</option>
+                  <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+                  <option value="fadeOutRight">fadeOutRight</option>
+                  <option value="fadeOutRightBig">fadeOutRightBig</option>
+                  <option value="fadeOutUp">fadeOutUp</option>
+                  <option value="fadeOutUpBig">fadeOutUpBig</option>
+                </optgroup>
+                <optgroup label="Lightspeed">
+                  <option value="lightSpeedOut">lightSpeedOut</option>
+                </optgroup>
+                <optgroup label="Rotating Entrances">
+                  <option value="rotateInUpLeft">rotateInUpLeft</option>
+                  <option value="rotateInUpRight">rotateInUpRight</option>
+                </optgroup>
+                <optgroup label="Rotating Exits">
+                  <option value="rotateOut">rotateOut</option>
+                  <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+                  <option value="rotateOutDownRight">rotateOutDownRight</option>
+                  <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+                  <option value="rotateOutUpRight">rotateOutUpRight</option>
+                </optgroup>
+                <optgroup label="Sliding Exits">
+                  <option value="slideOutUp">slideOutUp</option>
+                  <option value="slideOutDown">slideOutDown</option>
+                  <option value="slideOutLeft">slideOutLeft</option>
+                  <option value="slideOutRight">slideOutRight</option>
+                </optgroup>
+                <optgroup label="Zoom Exits">
+                  <option value="zoomOut">zoomOut</option>
+                  <option value="zoomOutDown">zoomOutDown</option>
+                  <option value="zoomOutLeft">zoomOutLeft</option>
+                  <option value="zoomOutRight">zoomOutRight</option>
+                  <option value="zoomOutUp">zoomOutUp</option>
+                </optgroup>
+                <optgroup label="Specials">
+                  <option value="hinge">hinge</option>
+                  <option value="rollOut">rollOut</option>
+                </optgroup>
+          </select>
+        </div>
+        <div class="col-4">
+          <select class="ui dropdown" id="position">
+            <option value="gspop-center-center">gspop-center-center</option>
+            <option value="gspop-center-right">gspop-center-right</option>
+            <option value="gspop-center-left">gspop-center-left</option>
+            <option value="gspop-top-center">gspop-top-center</option>
+            <option value="gspop-top-left">gspop-top-left</option>
+            <option value="gspop-top-right">gspop-top-right</option>
+            <option value="gspop-right-center">gspop-right-center</option>
+            <option value="gspop-right-bottom">gspop-right-bottom</option>
+            <option value="gspop-bottom-center">gspop-bottom-center</option>
+            <option value="gspop-bottom-left">gspop-bottom-left</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+            <button class="fluid ui button" id="anime-config-btn">
+              Click Me!
+            </button>
+          </div>
+        </div>
 
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
+    </div>
 
-1. Clone down the theme's repository (`git clone https://github.com/pages-themes/cayman`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `bundle exec jekyll serve` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
-
-### Running tests
-
-The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
