@@ -82,7 +82,7 @@
       $element.addClass(this.options.modalClasses + " "+ config.modalPosition);
     }
    
-    this.toggle();
+    // this.toggle();
   }
 
   gsPop.prototype.toggle = function(show) {
