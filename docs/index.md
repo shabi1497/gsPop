@@ -27,10 +27,11 @@ This will helop to do animation and to position the modal(top/center/bottom/righ
     bodyClass: "gspop-opened"
 }
 ```
+
 ``` html
   The following classes are needed for modal pop to work properly
-  gs-Modal  - is needed
-  hide      - we should hide by default. If not then there will be a jerk
+  gs-Modal - is needed
+  hide - we should hide by default. If not then there will be a jerk
   gs-cancel - To cancel the modal pop up we need to add this class
 ```
 
@@ -77,16 +78,22 @@ $('#default-config-btn').on('click', function() {
         <h2>
             Confirmation Dialog
         </h2>
+
     </div>
+
     <div class="gs-body">
         <p>
             Do you Confirm this Action?
         </p>
+
     </div>
+
     <div class="gs-footer">
         <button class="gs-confirm">Confirm</button>
         <button class="gs-cancel">Cancel</button>
+
     </div>
+
 </div>
 
 <button class="ui secondary button" id="default-config-btn">
@@ -152,9 +159,13 @@ Animation can be defined for each modal and can be applied.
 </div>
   <div class="container">
 
-<div class="row"><div  class="col-3">Animate In</div>  <div  class="col-3">Animate Out</div>  <div  class="col-3">Position</div>  </div>
+<div class="row">
+    <div  class="col-4">Animate In</div>
+    <div  class="col-4">Animate Out</div>
+    <div  class="col-4">Position</div>
+</div>
       <div class="row">
-        <div class="col-3">
+        <div class="col-4">
           <select class="ui dropdown" id="anime-in">
             <optgroup label="Attention Seekers">
               <option value="bounce">bounce</option>
@@ -220,7 +231,7 @@ Animation can be defined for each modal and can be applied.
             </optgroup>
       </select>
         </div>
-        <div class="col-3">
+        <div class="col-4">
           <select class="ui dropdown"  id="anime-out">
                 <optgroup label="Bouncing Exits">
                   <option value="bounceOut">bounceOut</option>
@@ -273,7 +284,7 @@ Animation can be defined for each modal and can be applied.
                 </optgroup>
           </select>
         </div>
-        <div class="col-3">
+        <div class="col-4">
           <select class="ui dropdown" id="position">
             <option value="gspop-center-center">gspop-center-center</option>
             <option value="gspop-center-right">gspop-center-right</option>
@@ -295,5 +306,6 @@ Animation can be defined for each modal and can be applied.
             </button>
           </div>
         </div>
+
     </div>
 
