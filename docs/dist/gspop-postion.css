@@ -15,7 +15,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-            margin: auto;
 }
 
 .gspop-position.gspop-top-center{
@@ -25,7 +24,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-            margin-top:30px;
 }
 
 .gspop-position.gspop-top-left{
@@ -35,8 +33,6 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-            margin-top:30px;
-            margin-left: 30px;
 }
 
 .gspop-position.gspop-top-right{
@@ -46,8 +42,6 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-            margin-top:30px;
-            margin-right:30px;
 }
 
 .gspop-position.gspop-right-center{
@@ -57,7 +51,6 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-            margin-right:30px;
 }
 
 .gspop-position.gspop-right-bottom{
@@ -67,9 +60,6 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-            
-            margin-right:30px;
-            margin-bottom:30px;
 }
 
 .gspop-position.gspop-bottom-center{
@@ -79,7 +69,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-            margin-bottom:30px;
 }
 
 .gspop-position.gspop-bottom-left{
@@ -89,6 +78,4 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-            margin-bottom:30px;
-            margin-left:30px;
 }
