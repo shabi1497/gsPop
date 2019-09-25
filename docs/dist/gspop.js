@@ -24,6 +24,8 @@
     this.element = $(element);
     this.options = $.extend(true, {}, defaults, options);
     this.init();
+    // Bind events
+    this.bindEvents();
   }
 
   /* add events for the plugin*/
@@ -34,12 +36,12 @@
     $element.find('.gs-cancel').on('click', self.close.bind(self));
 
     /* Close event */
-    $element.on('gspop.close', function() {
+    $element.off('gspop.close').on('gspop.close', function() {
         self.toggle();
     });
 
     /* Open event */
-    $element.on('gspop.open', function()  {
+    $element.off('gspop.close').on('gspop.open', function()  {
         self.toggle(true);
     });
 
@@ -75,8 +77,6 @@
       // By default, user need to add this in their template
       $element.removeClass('hide');
       $element.parent('.gs-Modal-Wrapper').appendTo('body');
-      // Bind events
-      this.bindEvents();
     } else{
       $element.parent('.gs-Modal-Wrapper').addClass(this.options.wrapperClasses);
       $element.addClass(this.options.modalClasses + " "+ config.modalPosition);
