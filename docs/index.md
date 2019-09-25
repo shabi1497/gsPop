@@ -276,7 +276,7 @@ Animation can be defined for each modal and can be applied.
           </select>
         </div>
         <div class="col-3">
-          <button class="ui secondary button" id="anime-config-btn">
+          <button id="anime-config-btn">
             Click Me!
           </button>
         </div>
