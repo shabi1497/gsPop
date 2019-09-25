@@ -33,7 +33,7 @@
     var self = this;
     var $element = self.element;
     if(this.options.backdrop.clickable) $element.next('.gs-Overlay').on('click', self.close.bind(self));
-    $element.find('.gs-cancel').on('click', self.close.bind(self));
+    $element.find('.gs-cancel').off('click').on('click', self.close.bind(self));
 
     /* Close event */
     $element.off('gspop.close').on('gspop.close', function() {
