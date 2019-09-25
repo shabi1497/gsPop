@@ -27,6 +27,12 @@ This will helop to do animation and to position the modal(top/center/bottom/righ
     bodyClass: "gspop-opened"
 }
 ```
+``` html
+  The following classes are needed for modal pop to work properly
+  gs-Modal  - is needed
+  hide      - we should hide by default. If not then there will be a jerk
+  gs-cancel - To cancel the modal pop up we need to add this class
+```
 
 * wrapperClasses - This will be used to attach classes to the modal wrapper
 * backdrop    - This will be used to attach classes to the inner modal
