@@ -89,8 +89,6 @@
       var self = this;
       if(show){
         $('body').addClass(self.options.bodyClass);
-      } else{
-        $('body').removeClass(self.options.bodyClass);
       }
 
       /*
@@ -165,6 +163,7 @@
                   config.modalPosition;
     this.element.removeClass(classes);
     this.element.parent('.gs-Modal-Wrapper').removeClass(this.options.wrapperClasses);
+    $('body').removeClass(this.options.bodyClass);
   }
 
   $.fn.gsPop = function (options) {
