@@ -1,86 +1,87 @@
 A minimal popup, modal jquery plugin.
-
 # How it works
 
-*   Modals are built with HTML, CSS, and JavaScript.  
+*   Modals are built with HTML, CSS, and JavaScript.
 *   Animation and position for the modal are done through CSS. So that user can modify based on their need
 *   To open the modal, there is a trigger event and when open and close modal, there will be some events (gsmodal.shown/gsmodal.hidden) that can be cached by the user.
 *   Modal backdrop configuration added. This can be removed or added through configuration
 
-
 ## Configuration details
-The following are the default configurations. These CSS classes will be added to the modal when open and will be removed on close. 
+
+The following are the default configurations. These CSS classes will be added to the modal when open and will be removed on close.
 This will helop to do animation and to position the modal(top/center/bottom/right/left). Everything controlled by css classes.
 
-```js
-{   
+``` js
+{
     wrapperClasses: "",
     modalClasses: "gspop-modal-position",
     backdrop: {
-      show: true,
-      clickable: true
+        show: true,
+        clickable: true
     },
     animate: {
-      apply: true,
-      hide: 'animated gp-flipOutX',
-      show: 'animated gp-flipIn'
+        apply: true,
+        hide: 'animated gp-flipOutX',
+        show: 'animated gp-flipIn'
     },
     bodyClass: "gspop-opened"
 }
 ```
-- wrapperClasses - This will be used to attach classes to the modal wrapper
-- backdrop    - This will be used to attach classes to the inner modal
-  - show      - to hide and show the backdrop
-  - clickable - To enable and disable backdrop click
-- animate     - animation configuration
-  - apply     - to hide and show the backdrop
-  - hide      - Animation classes on hide
-  - show      - Animation classes on show
-- bodyClass   - Class that will be added to body when modal opened
 
+* wrapperClasses - This will be used to attach classes to the modal wrapper
+* backdrop    - This will be used to attach classes to the inner modal
+  + show      - to hide and show the backdrop
+  + clickable - To enable and disable backdrop click
+* animate     - animation configuration
+  + apply     - to hide and show the backdrop
+  + hide      - Animation classes on hide
+  + show      - Animation classes on show
+* bodyClass   - Class that will be added to body when modal opened
 
 ### Default Configuration
 
-```html
+``` html
 <div class="gs-Modal hide" id="gs-Modal-default">
-      <div class="gs-header">
+    <div class="gs-header">
         <h2>
-          Confirmation Dialog
+            Confirmation Dialog
         </h2>
-      </div>
-      <div class="gs-body">
+    </div>
+    <div class="gs-body">
         <p>
-          Do you Confirm this Action?
+            Do you Confirm this Action?
         </p>
-      </div>
-      <div class="gs-footer">
-        <button class="gs-confirm" >Confirm</button>
-        <button class="gs-cancel" >Cancel</button>
-      </div>
- </div>
+    </div>
+    <div class="gs-footer">
+        <button class="gs-confirm">Confirm</button>
+        <button class="gs-cancel">Cancel</button>
+    </div>
+</div>
 ```
-```js
+
+``` js
 var modal = $('#gs-Modal-default').gsPop();
-        $('#default-config-btn').on('click',function(){
-          modal.trigger('gspop.open');
-        });
+$('#default-config-btn').on('click', function() {
+    modal.trigger('gspop.open');
+});
 ```
+
 <div class="gs-Modal hide" id="gs-Modal-default">
-      <div class="gs-header">
+    <div class="gs-header">
         <h2>
-          Confirmation Dialog
+            Confirmation Dialog
         </h2>
-      </div>
-      <div class="gs-body">
+    </div>
+    <div class="gs-body">
         <p>
-          Do you Confirm this Action?
+            Do you Confirm this Action?
         </p>
-      </div>
-      <div class="gs-footer">
-        <button class="gs-confirm" >Confirm</button>
-        <button class="gs-cancel" >Cancel</button>
-      </div>
- </div>
+    </div>
+    <div class="gs-footer">
+        <button class="gs-confirm">Confirm</button>
+        <button class="gs-cancel">Cancel</button>
+    </div>
+</div>
 
 <button class="ui secondary button" id="default-config-btn">
   Click Me!
@@ -88,58 +89,61 @@ var modal = $('#gs-Modal-default').gsPop();
 
 ### Animation and Position
 
-```html
+``` html
 <div class="gs-Modal hide" id="gs-Modal-anime">
-      <div class="gs-header">
+    <div class="gs-header">
         <h2>
-          Confirmation Dialog
+            Confirmation Dialog
         </h2>
-      </div>
-      <div class="gs-body">
+    </div>
+    <div class="gs-body">
         <p>
-          Do you Confirm this Action?
+            Do you Confirm this Action?
         </p>
-      </div>
-      <div class="gs-footer">
-        <button class="gs-confirm" >Confirm</button>
-        <button class="gs-cancel" >Cancel</button>
-      </div>
- </div>
+    </div>
+    <div class="gs-footer">
+        <button class="gs-confirm">Confirm</button>
+        <button class="gs-cancel">Cancel</button>
+    </div>
+</div>
 ```
+
 Animation can be defined for each modal and can be applied.
-```js
-  $('#anime-config-btn').on('click',function(){
-          var animeIn = $('#anime-in').val();
-          var animeOut = $('#anime-out').val();
-          var position = $('#position').val();
-          
-          $('#gs-Modal-default').gsPop({
-            wrapperClasses: position,
-            animate: {
+
+``` js
+  $('#anime-config-btn').on('click', function() {
+      var animeIn = $('#anime-in').val();
+      var animeOut = $('#anime-out').val();
+      var position = $('#position').val();
+
+      $('#gs-Modal-default').gsPop({
+          wrapperClasses: position,
+          animate: {
               apply: true,
-              hide: 'animated '+animeOut,
-              show: 'animated '+animeIn
-            }
-          }).trigger('gspop.open');
-         
-        });
+              hide: 'animated ' + animeOut,
+              show: 'animated ' + animeIn
+          }
+      }).trigger('gspop.open');
+
+  });
 ```
+
 <div class="gs-Modal hide" id="gs-Modal-anime">
-      <div class="gs-header">
+    <div class="gs-header">
         <h2>
-          Confirmation Dialog
+            Confirmation Dialog
         </h2>
-      </div>
-      <div class="gs-body">
+    </div>
+    <div class="gs-body">
         <p>
-          Do you Confirm this Action?
+            Do you Confirm this Action?
         </p>
-      </div>
-      <div class="gs-footer">
-        <button class="gs-confirm" >Confirm</button>
-        <button class="gs-cancel" >Cancel</button>
-      </div>
- </div>
+    </div>
+    <div class="gs-footer">
+        <button class="gs-confirm">Confirm</button>
+        <button class="gs-cancel">Cancel</button>
+    </div>
+</div>
   <div class="container">
 
 <div class="row"><div  class="col-3">Animate In</div>  <div  class="col-3">Animate Out</div>  <div  class="col-3">Position</div>  </div>
@@ -277,10 +281,13 @@ Animation can be defined for each modal and can be applied.
             <option value="gspop-bottom-left">gspop-bottom-left</option>
           </select>
         </div>
-        <div class="col-3">
-          <button class="ui secondary button" id="anime-config-btn">
-            Click Me!
-          </button>
-        </div>
       </div>
+      <div class="row">
+        <div class="col-12">
+            <button class="fluid ui button" id="anime-config-btn">
+              Click Me!
+            </button>
+          </div>
+        </div>
     </div>
+
