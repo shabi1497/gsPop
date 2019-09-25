@@ -24,7 +24,6 @@
     this.element = $(element);
     this.options = $.extend(true, {}, defaults, options);
     this.init();
-    this.bindEvents();
   }
 
   /* add events for the plugin*/
@@ -76,6 +75,8 @@
       // By default, user need to add this in their template
       $element.removeClass('hide');
       $element.parent('.gs-Modal-Wrapper').appendTo('body');
+      // Bind events
+      this.bindEvents();
     } else{
       $element.parent('.gs-Modal-Wrapper').addClass(this.options.wrapperClasses);
       $element.addClass(this.options.modalClasses + " "+ config.modalPosition);
