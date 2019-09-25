@@ -1,0 +1,8 @@
+title: gsPop 
+description: gsPop is a minimal popup/modal jquery plugin
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-cayman
+
+# Build settings
+markdown: kramdown
