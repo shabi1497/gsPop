@@ -1,4 +1,4 @@
-A minimal popup, modal jquery plugin.
+A minimal popup, modal jquery plugin. Demo - https://shabi1497.github.io/gsPop/
 # How it works
 
 *   Modals are built with HTML, CSS, and JavaScript.
