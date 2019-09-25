@@ -65,6 +65,7 @@
 
   gsPop.prototype.init = function () {
     var $element = this.element;
+    this.clean();
     if($element.parent('.gs-Modal-Wrapper').length<=0) {
       $element.wrap("<div class='gs-Modal-Wrapper "+ this.options.wrapperClasses+"'></div>");
       $element.addClass(this.options.modalClasses + " "+ config.modalPosition);
