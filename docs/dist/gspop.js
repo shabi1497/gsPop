@@ -48,7 +48,7 @@
 
     if(self.options.animate.apply) {
         $element.on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-          if(!self.displayModal) {
+          if(!$element.data().showModal) {
             self.element.parent().hide();
             self.clean();
             self.triggerHidden();
@@ -143,7 +143,7 @@
     if(self.options.animate.apply) {
       self.element.removeClass(self.options.animate.hide+" "+ self.options.animate.show);
       self.element.addClass(classes);
-      self.displayModal = show;
+      self.element.data('show-modal', show);
     }
     if(show) self.element.css('visibility', visibility);
   }
