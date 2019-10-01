@@ -23,8 +23,10 @@
   function gsPop(element, options) {
     this.element = $(element);
     this.options = $.extend(true, {}, defaults, options);
-    this.init();
+    
+    // Bind events
     this.bindEvents();
+    this.init();
   }
 
   /* add events for the plugin*/
@@ -32,22 +34,23 @@
     var self = this;
     var $element = self.element;
     if(this.options.backdrop.clickable) $element.next('.gs-Overlay').on('click', self.close.bind(self));
-    $element.find('.gs-cancel').on('click', self.close.bind(self));
+    $element.find('.gs-cancel').off('click').on('click', self.close.bind(self));
 
     /* Close event */
-    $element.on('gspop.close', function() {
+    $element.off('gspop.close').on('gspop.close', function() {
         self.toggle();
     });
 
     /* Open event */
-    $element.on('gspop.open', function()  {
+    $element.off('gspop.open').on('gspop.open', function()  {
         self.toggle(true);
     });
 
     if(self.options.animate.apply) {
-        $element.on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-          if(!self.showModal) {
-            self.element.parent().hide();
+      var animataionEvents = "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd";
+        $element.off(animataionEvents).on(animataionEvents, function(){
+          if(!$element.data().showModal) {
+            self.hideModal();
             self.clean();
             self.triggerHidden();
           }
@@ -81,15 +84,13 @@
       $element.addClass(this.options.modalClasses + " "+ config.modalPosition);
     }
    
-    this.toggle();
+    // this.toggle();
   }
 
   gsPop.prototype.toggle = function(show) {
       var self = this;
       if(show){
         $('body').addClass(self.options.bodyClass);
-      } else{
-        $('body').removeClass(self.options.bodyClass);
       }
 
       /*
@@ -143,7 +144,7 @@
     if(self.options.animate.apply) {
       self.element.removeClass(self.options.animate.hide+" "+ self.options.animate.show);
       self.element.addClass(classes);
-      self.showModal = show;
+      self.element.data('show-modal', show||false);
     }
     if(show) self.element.css('visibility', visibility);
   }
@@ -163,7 +164,10 @@
                   this.options.modalClasses + " " +
                   config.modalPosition;
     this.element.removeClass(classes);
-    this.element.parent('.gs-Modal-Wrapper').removeClass(this.options.wrapperClasses);
+    var parent = this.element.parent('.gs-Modal-Wrapper');
+    parent.removeClass(this.options.wrapperClasses);
+    parent.hide();
+    $('body').removeClass(this.options.bodyClass);
   }
 
   $.fn.gsPop = function (options) {
