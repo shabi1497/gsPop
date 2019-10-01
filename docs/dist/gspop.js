@@ -143,7 +143,7 @@
     if(self.options.animate.apply) {
       self.element.removeClass(self.options.animate.hide+" "+ self.options.animate.show);
       self.element.addClass(classes);
-      self.element.data('show-modal', show);
+      self.element.data('show-modal', show||false);
     }
     if(show) self.element.css('visibility', visibility);
   }
