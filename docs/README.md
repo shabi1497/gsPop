@@ -74,6 +74,7 @@ This will helop to do animation and to position the modal(top/center/bottom/righ
     </div>
 </div>
 ```
+
 ### Animation and Position
 
 ``` html
