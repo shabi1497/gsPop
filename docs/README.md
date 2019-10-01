@@ -1,4 +1,4 @@
-Size: 5 KB (unminified)
+Size: 5 KB (uncompressed)
 
 A minimal popup, modal jquery plugin. Demo - https://shabi1497.github.io/gsPop/
 # How it works
