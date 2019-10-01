@@ -75,6 +75,12 @@ This will helop to do animation and to position the modal(top/center/bottom/righ
     </div>
 </div>
 ```
+```js
+var modal = $('#gs-Modal-default').gsPop();
+$('#default-config-btn').on('click', function() {
+    modal.trigger('gspop.open');
+});
+```
 
 ### Animation and Position
 
