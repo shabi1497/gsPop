@@ -163,8 +163,9 @@
                   this.options.modalClasses + " " +
                   config.modalPosition;
     this.element.removeClass(classes);
-    this.element.parent('.gs-Modal-Wrapper').removeClass(this.options.wrapperClasses);
-    this.element.parent().hide();
+    var parent = this.element.parent('.gs-Modal-Wrapper');
+    parent.removeClass(this.options.wrapperClasses);
+    parent.hide();
     $('body').removeClass(this.options.bodyClass);
   }
 
