@@ -47,7 +47,8 @@
     });
 
     if(self.options.animate.apply) {
-        $element.on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+      var animataionEvents = "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd";
+        $element.off(animataionEvents).on(animataionEvents, function(){
           if(!$element.data().showModal) {
             self.hideModal();
             self.clean();
