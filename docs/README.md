@@ -33,6 +33,7 @@ The following are the default configurations. These CSS classes will be added to
   The following classes are needed for modal pop to work properly
   1.gs-Modal
   2.hide- To hide the modal(by default) to avoid the jerk on page load.
+  (add both the above classes to your modal's most outer element)
   3.gs-cancel- For the cancel button of the modal.
 ```
 ```js
